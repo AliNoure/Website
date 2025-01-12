@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <form>  
+        <fieldset>
+            <legend>Personal Info:</legend>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text"  pattern="[A-Za-z]+" title="Only alphabetic characters are allowed" placeholder="Ali" required 
+                    oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '');">  
+                </div>
+                <div class="form-group">
+                    <label for="matriculation">Matriculation:</label>
+                    <input type="text" pattern="^\d+$" title="Only numeric values are allowed" placeholder="100001779" required 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');"> 
+                </div>
+                <div class="form-group">
+                    <label for="m_initial">M. Initial:</label>
+                    <input type="text" pattern="[A-Za-z]" title="Only a single alphabetic character is allowed" placeholder="Hassan" required 
+                    oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '').slice(0,1);"> 
+                </div>
+                <div class="form-group">
+                    <label for="semester">Semester:</label>
+                    <select id="semester" name="semester" required style="width: 103.5%;">
+                        <option value="Winter">Winter</option>
+                        <option value="Summer">Summer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" pattern="[A-Za-z]+"  title="Only alphabetic characters are allowed" placeholder="Noureddine" required 
+                    oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '');"> 
+                </div>
+                <div class="form-group">
+                    <label for="program">Program:</label>
+                    <select id="program" name="program" required style="width: 103.5%;">
+                        <option value="">Select Program</option>
+                        <option value="cyber_security" selected>Cyber Security</option>
+                        <option value="computer_science">Computer Science</option>
+                        <option value="data_science">Data Science</option>
+                        <option value="business_administration">Business Administration</option>
+                        <option value="international_management">International Management</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">I am from:</label>
+                    <select id="country" name="country" required style="width: 103.5%;">
+                        <option value="">Select Country</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BR">Brazil</option>
+                        <option value="BN">Brunei</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="CV">Cape Verde</option>
+                        <option value="KY">Cayman Islands</option>
+                        <option value="CF">Central African Republic</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CG">Congo</option>
+                        <option value="CD">Congo, Democratic Republic</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="CI">Cote d'Ivoire</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="GQ">Equatorial Guinea</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="GA">Gabon</option>
+                        <option value="GM">Gambia</option>
+                        <option value="GE">Georgia</option>
+                        <option value="DE">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GR">Greece</option>
+                        <option value="GD">Grenada</option>
+                        <option value="GU">Guam</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GW">Guinea-Bissau</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HT">Haiti</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IR">Iran</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KI">Kiribati</option>
+                        <option value="KP">Korea (North)</option>
+                        <option value="KR">Korea (South)</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="KG">Kyrgyzstan</option>
+                        <option value="LA">Laos</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LS">Lesotho</option>
+                        <option value="LR">Liberia</option>
+                        <option value="LY">Libya</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MO">Macau</option>
+                        <option value="MK">Macedonia</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MW">Malawi</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="ML">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MH">Marshall Islands</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="MU">Mauritius</option>
+                        <option value="MX">Mexico</option>
+                        <option value="FM">Micronesia</option>
+                        <option value="MD">Moldova</option>
+                        <option value="MC">Monaco</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="ME">Montenegro</option>
+                        <option value="MA">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="MM">Myanmar</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NE">Niger</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PS">Palestine</option>
+                        <option value="PW">Palau</option>
+                        <option value="PA">Panama</option>
+                        <option value="PG">Papua New Guinea</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="QA">Qatar</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="RW">Rwanda</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="RS">Serbia</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SL">Sierra Leone</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="SB">Solomon Islands</option>
+                        <option value="SO">Somalia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="ES">Spain</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SD">Sudan</option>
+                        <option value="SR">Suriname</option>
+                        <option value="SZ">Swaziland</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="SY">Syria</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TJ">Tajikistan</option>
+                        <option value="TZ">Tanzania</option>
+                        <option value="TH">Thailand</option>
+                        <option value="TL">Timor-Leste</option>
+                        <option value="TG">Togo</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad and Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="TM">Turkmenistan</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UA" selected>Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="UZ">Uzbekistan</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabwe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="start_date">Started in:</label>
+                    <input type="date" id="start_date" value="2024-10-01" name="start_date" required>
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>I've heard this graduate program from:</legend>
+            <div class="inline-options">
+                <label><input type="checkbox" name="source" value="media"> Media</label>
+                <label><input type="checkbox" name="source" value="add"> Add</label>
+                <label><input type="checkbox" name="source" value="agency"> Agency</label>
+                <label><input type="checkbox" name="source" value="other"> Other</label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>When I finish my studies, I will:</legend>
+            <label><input type="radio" name="plans" value="home" required> Return to my Country</label>
+            <label><input type="radio" name="plans" value="work" required> Find a job in Europe</label>
+            <label><input type="radio" name="plans" value="future" required> Do the practical training and then decide</label>
+        </fieldset>
+        
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" placeholder="I loved learning Software Engineering for all the projects coming ahead" required></textarea>
+
+        <p>
+            <h3>I will write a paragraph for each methodology of SDLC. There are many of them but I will suggest a few:</h3>
+            <ol type="A">
+                <li>Waterfall Model: This is a linear and sequential approach where each phase must be completed before the next phase begins. It is easy to understand and manage but lacks flexibility.</li>
+                <li>V-Model: Also known as the Verification and Validation model, it is an extension of the Waterfall model. Each development stage is associated with a testing phase, ensuring high quality but can be rigid and less adaptive to changes.</li>
+                <li>Iterative Model: This model focuses on repetition, allowing developers to create a basic version of the software and then iteratively improve it. It is flexible and allows for changes, but can be resource-intensive.</li>
+            </ol>
+        </p>
+
+
+        <p>
+            <h3>Among so many SDLC Methodologies the ones that are in the AGILE classification are better.
+            Among AGILE SDLC Methods, I have also a few suggestions:</h3>
+            <ol type="A">
+                <li>Scrum: A framework that allows teams to work on complex projects and deliver high-value products by breaking down the work into manageable chunks called sprints.</li>
+                <li>Kanban: A visual approach to managing tasks and workflows, focusing on continuous delivery without overburdening the development team.</li>
+                <li>Extreme Programming (XP): Emphasizes customer satisfaction and promotes frequent releases in short development cycles, improving productivity and introducing checkpoints to adapt to new customer requirements.</li>
+                <li>Lean Development: Focuses on delivering value to the customer by eliminating waste, improving efficiency, and continuously improving processes.</li>
+            </ol>
+        </p>
+
+        <p>
+            <h3>In this software development and application course of <a href="https://www.srh-berlin.de/en/" target="_blank">SRH</a> we learned the following:</h3>
+            <ol type="a">
+                <li>Software Development Life Cycle (SDLC): Understanding the different phases of software development from planning to maintenance.</li>
+                <li>Agile Methodologies: Learning about Agile frameworks like Scrum and Kanban to manage and execute projects efficiently.</li>
+                <li>Version Control Systems: Using tools like Git to manage code versions and collaborate with team members.</li>
+                <li>Web Development: Building web applications using HTML, CSS, and JavaScript.</li>
+            </ol>
+        </p>
+
+        <p>
+            <h3>I have used CSS in this webpage and there are 3 ways to include <a href="https://www.w3schools.com/css/" target="_blank">CSS</a> in a webpage as follows:</h3>
+            <ol type="a">
+                <li>Inline CSS: This method involves adding CSS directly to the HTML elements using the "style" attribute.</li>
+                <li>Internal CSS: This method involves adding CSS within a "style" tag inside the "head" section of the HTML document.</li>
+                <li>External CSS: This method involves linking an external CSS file to the HTML document using the "link" tag.</li>
+            </ol>
+        </p>
+
+        <p>
+            <h3>The reasons CSS used in a webpage are:</h3>
+            <ol type="1">
+                <li>Separation of Content and Design: CSS allows you to separate the content of your webpage (HTML) from its design (CSS), making it easier to maintain and update.</li>
+                <li>Consistency: CSS enables you to apply consistent styling across multiple pages of a website, ensuring a uniform look and feel.</li>
+                <li>Improved Load Times: By using external CSS files, you can reduce the amount of code in your HTML files, leading to faster load times.</li>
+                </ol>
+        </p>
+
+        <p>
+            <h3>We also use <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a> in webpage development. The main reasons are as follows:</h3>
+            <ol type="a">
+                <li>Interactivity: Adds dynamic features like forms, buttons, and pop-ups.</li>
+                <li>User Experience: Enhances the site with smooth animations and transitions.</li>
+                <li>Asynchronous Communication (AJAX): Updates page content without reloading.</li>
+                <li>Cross-Browser Compatibility: Ensures the site works across different browsers and devices.</li>
+            </ol>
+        </p>
+
+        <p>
+            <h3>I've done this project myself and accept the consequence if found other ways.</h3>
+            You can reach me at:    
+            <input type="email" id="email" name="email" 
+            placeholder="alinoureddine979@gmail.com" 
+            required style="width: 30%;" oninput="setCustomValidity('')" 
+            oninvalid="setCustomValidity('Please enter a valid email address.')">
+        </p>
+
+    </form>
+</body>
+</html>
